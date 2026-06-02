@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <title>Vendhee</title>
+  </head>
+  <body>
+    <!-- THANK YOU MODAL -->
+    <div class="modal-overlay" id="thankYouModal">
+      <div class="modal-card">
+        <div class="modal-dots-bg"></div>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close">
+          ✕
+        </button>
+
+        <h3 class="modal-title">Message Sent!</h3>
+        <p class="modal-text">
+          Thank you for reaching out, <strong id="modalSenderName"></strong>!
+          I'll get back to you as soon as I can. Talk soon!
+        </p>
+        <button class="btn btn-primary-purple" onclick="closeModal()">
+          Sounds great!
+        </button>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav-container" id="mainNav">
+      <div class="nav-logo-container">
+        <a class="nav-logo" href="#">Vendhee.</a>
+        <button
+          class="hamburger"
+          id="hamburgerBtn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link-item" href="#">Home</a></li>
+        <li><a class="nav-link-item" href="#">About</a></li>
+        <li><a class="nav-link-item" href="#services">Services</a></li>
+        <li><a class="nav-link-item" href="#works">Works</a></li>
+        <li class="nav-contact-mobile-item">
+          <a class="nav-link-item" href="#contact">Contact</a>
+        </li>
+      </ul>
+      <a class="nav-link-contact nav-contact-desktop" href="#contact"
+        ><ion-icon name="mail-outline"></ion-icon
+      ></a>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <div class="container">
+      <header>
+        <!-- HERO -->
+        <section class="hero-container" id="hero">
+          <div class="hero-text-content">
+            <div class="hero-badge">🫡 Available for work</div>
+            <h1 class="hero-heading">
+              Hi, I'm <span class="highlight-primary">Vendhee</span> <br />
+              Web Developer
+            </h1>
+            <p class="hero-paragraph">
+              Computer Science student passionate about building clean,
+              responsive web experiences — from UI design to full-stack
+              solutions that solve real problems.
+            </p>
+            <ul class="hero-links">
+              <li>
+                <a class="btn btn-primary" href="#works">View My Work</a>
+              </li>
+              <li>
+                <a
+                  class="btn btn-secondary"
+                  href="https://github.com/alvendherfrancisco"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <img
+            class="hero-img"
+            src="assets/vendhee-hero.png"
+            alt="vendhee hero image"
+            width="400px"
+          />
+        </section>
+      </header>
+
+      <main>
+        <!-- TECH STACK MARQUEE -->
+        <section class="tech-stack-section" id="techstack">
+          <p class="tech-stack-label">Tech I work with</p>
+          <div class="marquee-wrapper">
+            <div class="marquee-track">
+              <div class="tech-pill">HTML5</div>
+              <div class="tech-pill">CSS3</div>
+              <div class="tech-pill">JavaScript</div>
+              <div class="tech-pill">Python</div>
+              <div class="tech-pill">React</div>
+              <div class="tech-pill">Node.js</div>
+              <div class="tech-pill">FastAPI</div>
+              <div class="tech-pill">PyTorch</div>
+              <div class="tech-pill">Figma</div>
+              <div class="tech-pill">Git</div>
+              <div class="tech-pill">Tailwind CSS</div>
+              <div class="tech-pill">PostgreSQL</div>
+              <!-- Duplicate for seamless loop -->
+              <div class="tech-pill">HTML5</div>
+              <div class="tech-pill">CSS3</div>
+              <div class="tech-pill">JavaScript</div>
+              <div class="tech-pill">Python</div>
+              <div class="tech-pill">React</div>
+              <div class="tech-pill">Node.js</div>
+              <div class="tech-pill">FastAPI</div>
+              <div class="tech-pill">PyTorch</div>
+              <div class="tech-pill">Figma</div>
+              <div class="tech-pill">Git</div>
+              <div class="tech-pill">Tailwind CSS</div>
+              <div class="tech-pill">PostgreSQL</div>
+            </div>
+          </div>
+          <div class="marquee-wrapper marquee-reverse">
+            <div class="marquee-track marquee-track-reverse">
+              <div class="tech-pill tech-pill-alt">Netlify</div>
+              <div class="tech-pill tech-pill-alt">Vercel</div>
+              <div class="tech-pill tech-pill-alt">HuggingFace</div>
+              <div class="tech-pill tech-pill-alt">REST APIs</div>
+              <div class="tech-pill tech-pill-alt">Machine Learning</div>
+              <div class="tech-pill tech-pill-alt">Responsive Design</div>
+              <div class="tech-pill tech-pill-alt">UI/UX</div>
+              <div class="tech-pill tech-pill-alt">Java</div>
+              <div class="tech-pill tech-pill-alt">SQL</div>
+              <div class="tech-pill tech-pill-alt">Object Detection</div>
+              <!-- Duplicate -->
+              <div class="tech-pill tech-pill-alt">Netlify</div>
+              <div class="tech-pill tech-pill-alt">Vercel</div>
+              <div class="tech-pill tech-pill-alt">HuggingFace</div>
+              <div class="tech-pill tech-pill-alt">REST APIs</div>
+              <div class="tech-pill tech-pill-alt">Machine Learning</div>
+              <div class="tech-pill tech-pill-alt">Responsive Design</div>
+              <div class="tech-pill tech-pill-alt">UI/UX</div>
+              <div class="tech-pill tech-pill-alt">Java</div>
+              <div class="tech-pill tech-pill-alt">SQL</div>
+              <div class="tech-pill tech-pill-alt">Object Detection</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services-container" id="services">
+          <div class="services-content-right">
+            <h2 class="services-heading">
+              My Awesome
+              <span class="highlight-secondary"> <br />Services</span>
+            </h2>
+            <p class="services-paragraph">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Dignissimos ad illum perspiciatis quis tempora nulla odio, eveniet
+              ratione sapiente incidunt id facilis, esse aspernatur cupiditate
+              laboriosam repellat alias. Odio, laborum.
+            </p>
+            <a class="btn btn-primary-purple" href="#">Download Resume </a>
+          </div>
+
+          <div class="services-content-left">
+            <div class="highlight-card">
+              <div class="services-card">
+                <div class="services-icon-container">
+                  <ion-icon name="flower-outline"></ion-icon>
+                </div>
+                <div>
+                  <h3 class="services-card-heading">Ui/Ux Design</h3>
+                  <p class="services-card-paragraph">
+                    Lorem ipsum dummy text are usually use in these section.
+                    Lorem ipsum dummy text are used in this design
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="services-card">
+              <div class="services-icon-container">
+                <ion-icon name="code-slash-outline"></ion-icon>
+              </div>
+              <div>
+                <h3 class="services-card-heading">Frontend</h3>
+                <p class="services-card-paragraph">
+                  Lorem ipsum dummy text are usually use in these section. Lorem
+                  ipsum dummy text are used in this design
+                </p>
+              </div>
+            </div>
+            <div class="services-card">
+              <div class="services-icon-container">
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+              <div>
+                <h3 class="services-card-heading">Backend</h3>
+                <p class="services-card-paragraph">
+                  Lorem ipsum dummy text are usually use in these section. Lorem
+                  ipsum dummy text are used in this design
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WORKS -->
+        <section class="works-container" id="works">
+          <h2 class="works-heading">
+            Selected <span class="highlight-secondary">Works</span>
+          </h2>
+          <p class="works-paragraph">
+            Here are some of my recent projects that showcase my skills and
+            expertise.
+          </p>
+
+          <div class="works-content">
+            <div class="works-card">
+              <img
+                class="works-card-img"
+                src="assets/works-photobooth.png"
+                alt=""
+              />
+              <h3 class="works-card-heading">Vendhee's Booth</h3>
+              <p class="works-card-paragraph">
+                Vendhee's Booth is a fully client-side photo booth web
+                application that lets users capture or upload photos, apply
+                filters, and download customizable photo strips directly in the
+                browser.
+              </p>
+              <div class="works-card-tags">
+                <span class="wc-tags-item">HTML</span>
+                <span class="wc-tags-item">CSS</span>
+                <span class="wc-tags-item">JavaScript</span>
+              </div>
+              <ul class="works-card-links">
+                <li>
+                  <a
+                    class="btn-card"
+                    href="https://vendhee-booth.netlify.app/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </li>
+                <li>
+                  <div class="group relative">
+                    <button>
+                      <a
+                        href="https://github.com/alvendherfrancisco/vendhee-booth"
+                        target="_blank"
+                      >
+                        <svg
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          class="w-8 hover:scale-125 duration-200 hover:stroke-purple-400"
+                        >
+                          <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                          ></path>
+                        </svg>
+                      </a>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="works-card">
+              <img
+                class="works-card-img"
+                src="assets/works-figma-project.png"
+                alt=""
+              />
+              <h3 class="works-card-heading">Figma Project</h3>
+              <p class="works-card-paragraph">
+                A UI/UX design project created in Figma showcasing clean layout
+                principles and interactive prototyping.
+              </p>
+              <div class="works-card-tags">
+                <span class="wc-tags-item">HTML</span>
+                <span class="wc-tags-item">CSS</span>
+                <span class="wc-tags-item">JavaScript</span>
+              </div>
+
+              <ul class="works-card-links">
+                <li><a class="btn-card" href="#">Live Demo</a></li>
+                <li>
+                  <div class="group relative">
+                    <button>
+                      <svg
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        class="w-8 hover:scale-125 duration-200 hover:stroke-purple-400"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="works-card">
+              <img class="works-card-img" src="assets/works-ml.png" alt="" />
+              <h3 class="works-card-heading">VetFractureAI</h3>
+              <p class="works-card-paragraph">
+                VetFractureAI is a web application that detects and classifies
+                femoral shaft fractures in dog and cat X-rays using Faster R-CNN
+                and AO/OTA standards.
+              </p>
+              <div class="works-card-tags">
+                <span class="wc-tags-item">PyTorch</span>
+                <span class="wc-tags-item">Faster R-CNN</span>
+                <span class="wc-tags-item">FastAPI</span>
+              </div>
+              <ul class="works-card-links">
+                <li>
+                  <a
+                    class="btn-card"
+                    href="https://huggingface.co/spaces/alvendherfrancisco/VetFractureAI"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </li>
+                <li>
+                  <div class="group relative">
+                    <button>
+                      <a
+                        href="https://github.com/alvendherfrancisco/vet-fracture-ai"
+                        target="_blank"
+                      >
+                        <svg
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          class="w-8 hover:scale-125 duration-200 hover:stroke-purple-400"
+                        >
+                          <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                          ></path>
+                        </svg>
+                      </a>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact-container" id="contact">
+          <h2 class="contact-heading">
+            Let's Work <span class="highlight-primary">Together</span>
+          </h2>
+          <p class="contact-paragraph">
+            Feel free to reach out to me for any inquiries or opportunities!
+          </p>
+
+          <div class="contact-content">
+            <form
+              id="contact-form"
+              class="contact-form"
+              onsubmit="sendEmail(event)"
+            >
+              <label class="contact-form-label" for="name">Name</label>
+              <input
+                class="form-input-item"
+                id="name"
+                type="text"
+                placeholder="Your name"
+                required
+              />
+              <label class="contact-form-label" for="email"
+                >Email Address</label
+              >
+              <input
+                class="form-input-item"
+                id="email"
+                type="email"
+                placeholder="you@company.com"
+                required
+              />
+              <label class="contact-form-label" for="message"
+                >What's on your mind?</label
+              >
+              <textarea
+                class="form-input-item"
+                id="message"
+                placeholder="Tell me about your project or opportunity..."
+                cols="30"
+                rows="5"
+                minlength="10"
+                required
+              ></textarea>
+              <button class="from-btn btn-primary" type="submit">
+                Send Message
+              </button>
+            </form>
+
+            <div class="contact-info-container">
+              <img src="assets/vendhee-contact.png" alt="" />
+              <ul class="contact-info-list">
+                <li class="info-list-item">
+                  <div class="icon-circle">
+                    <ion-icon name="mail"></ion-icon>
+                  </div>
+                  alvendherfrancisco01@gmail.com
+                </li>
+                <li class="info-list-item">
+                  <div class="icon-circle">
+                    <ion-icon name="call"></ion-icon>
+                  </div>
+                  +63 919 877 3612
+                </li>
+                <li class="info-list-item">
+                  <div class="icon-circle">
+                    <ion-icon name="location"></ion-icon>
+                  </div>
+                  Jala-Jala, Rizal, Philippines
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-container">
+      <a class="footer-logo" href="">Vendhee.</a>
+      <p>&copy; 2026 Vendhee. All rights reserved.</p>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/alvendherfrancisco" target="_blank"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/alvendher-francisco-5452b1398 "
+            target="_blank"
+            ><ion-icon name="logo-linkedin"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="mailto:alvendherfrancisco01@gmail.com"
+            ><ion-icon name="mail"></ion-icon
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("k2OVtLPJ82mGr2q0l");
+      })();
+    </script>
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+/* Large Devices / Small Laptops */
+/* <= 1200px */
+@media (max-width: 75rem) {
+  html {
+    font-size: 80%; /* 1rem = 16px */
+  }
+}
+
+/* Tablets Landscape */
+/* <= 992px */
+@media (max-width: 62rem) {
+  html {
+    font-size: 75%; /* 1rem = 12px */
+  }
+
+  .container {
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto, auto;
+    gap: 6rem;
+    margin-bottom: 8rem;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    margin-bottom: 8rem;
+  }
+
+  .services-content-right {
+    padding: 0;
+    order: 1;
+  }
+
+  .services-content-left {
+    order: 2;
+  }
+
+  .services-card {
+    padding: 2rem 1.5rem;
+    gap: 1.5em;
+  }
+
+  .highlight-card::before {
+    box-shadow: 0 1rem 2rem 0rem var(--shadow);
+  }
+
+  .works-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3 (auto);
+  }
+
+  .works-card {
+    padding: 5rem 4rem;
+  }
+
+  .contact-container {
+    margin-bottom: 8rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    box-shadow: none;
+  }
+  .contact-form {
+    order: 2;
+  }
+
+  .contact-info-container {
+    order: 1;
+  }
+
+  .contact-info-list {
+    gap: 2rem;
+  }
+
+  .footer-container p,
+  .footer-container a {
+    font-size: var(--text-sm);
+  }
+}
+
+/* Tablets Portrait */
+/* <= 768px */
+@media (max-width: 48rem) {
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+}
+
+/* Large Phones */
+/* <= 576px */
+@media (max-width: 36rem) {
+  html {
+    font-size: 53.125%; /* 1rem = 8.5px */
+  }
+
+  /* Show hamburger, hide desktop contact pill */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Nav bar stays single row: logo + hamburger */
+  .nav-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0 5%;
+    min-height: var(--nav-height);
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .nav-logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: var(--nav-height);
+  }
+
+  /* Hamburger button */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: var(--border-radius-small);
+    transition: background 0.2s;
+  }
+
+  .hamburger:hover {
+    background: var(--primary-tint);
+  }
+
+  .hamburger-bar {
+    display: block;
+    width: 2.4rem;
+    height: 0.25rem;
+    background: var(--tertiary-base);
+    border-radius: 10rem;
+    transform-origin: center;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      background 0.2s;
+  }
+
+  /* Animated X when open */
+  .hamburger.is-open .hamburger-bar:nth-child(1) {
+    transform: translateY(0.75rem) rotate(45deg);
+  }
+  .hamburger.is-open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .hamburger.is-open .hamburger-bar:nth-child(3) {
+    transform: translateY(-0.75rem) rotate(-45deg);
+  }
+
+  /* Nav links — slide-down drawer */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition:
+      max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s ease,
+      padding 0.3s ease;
+    padding: 0;
+  }
+
+  .nav-links.nav-open {
+    max-height: 40rem;
+    opacity: 1;
+    padding: 1rem 0 2rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+  }
+
+  .nav-link-item {
+    display: block;
+    padding: 1.2rem 1.6rem;
+    font-size: var(--text-base);
+    width: 100%;
+    border-radius: var(--border-radius-small);
+  }
+
+  /* Show contact link inside mobile menu, hide desktop pill */
+  .nav-contact-desktop {
+    display: none;
+  }
+
+  .nav-contact-mobile-item {
+    display: block !important;
+  }
+}
+
+/* Small Phones */
+/* <= 400px */
+@media (max-width: 25rem) {
+  html {
+    font-size: 45%; /* 1rem = 7.2px */
+  }
+}
