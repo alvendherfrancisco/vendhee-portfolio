@@ -284,10 +284,8 @@ a:active {
   border-image: var(--gradient) 1;
 }
 
-.nav-logo-container .nav-logo {
-  font-size: var(--text-base);
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-base);
+.nav-logo-img {
+  width: 12rem;
 }
 
 /* Hamburger — hidden on desktop, shown via media query */
@@ -306,6 +304,7 @@ a:active {
   inset: 0;
   top: var(--nav-height);
   background: rgba(33, 37, 41, 0.3);
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   z-index: 9;
   opacity: 0;
@@ -506,7 +505,7 @@ a:active {
 .works-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .works-card {
@@ -525,6 +524,7 @@ a:active {
   width: max-content;
   border-radius: var(--border-radius-small);
   margin-bottom: 3rem;
+  height: max-content;
 }
 
 .works-card-heading {
@@ -689,10 +689,8 @@ a:active {
   gap: 2rem;
 }
 
-.footer-container .footer-logo {
-  font-size: 1.4rem;
-  font-weight: var(--font-weight-medium);
-  color: var(--secondary-tint);
+.footer-container .footer-logo-img {
+  width: 12rem;
 }
 
 .footer-container p {
@@ -986,6 +984,7 @@ body {
   inset: 0;
   background: rgba(33, 37, 41, 0.45);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 100;
   display: flex;
   justify-content: center;

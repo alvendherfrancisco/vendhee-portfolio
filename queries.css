@@ -213,6 +213,10 @@
   .nav-contact-mobile-item {
     display: block !important;
   }
+
+  .footer-container .footer-logo-img {
+    width: 9rem;
+  }
 }
 
 /* Small Phones */
